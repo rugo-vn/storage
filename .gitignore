@@ -1,5 +1,6 @@
 # Tmp
 .cache
+.tmp
 
 # Dependencies
 node_modules
