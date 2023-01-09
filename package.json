@@ -1,6 +1,6 @@
 {
   "name": "@rugo-vn/storage",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Store Management Service.",
   "main": "./src/index.js",
   "type": "module",
@@ -22,8 +22,8 @@
     "mocha": "^10.0.0"
   },
   "dependencies": {
-    "@rugo-vn/exception": "../exception",
-    "@rugo-vn/service": "../service",
+    "@rugo-vn/exception": "^1.0.0",
+    "@rugo-vn/service": "^2.0.1",
     "mime": "^3.0.0",
     "object-hash": "^3.0.0",
     "ramda": "^0.28.0"
