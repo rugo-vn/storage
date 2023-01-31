@@ -49,4 +49,12 @@ describe('store test', () => {
     const res = await broker.call(`storage.list`, { ...DEFAULT_DRIVE, path: '.' });
     expect(res).to.has.property('length', 2);
   });
+
+  it('should delete an entry', async () => {
+    const res = await broker.call(`storage.remove`, { ...DEFAULT_DRIVE, path: 'hi.txt' });
+    expect(res).to.has.property('name', 'hi.txt');
+
+    const res2 = await broker.call(`storage.list`, { ...DEFAULT_DRIVE, path: '.' });
+    expect(res2).to.has.property('length', 1);
+  });
 });

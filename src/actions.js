@@ -4,6 +4,7 @@ import { closeSync, existsSync, mkdirSync, openSync, readdirSync, statSync } fro
 import { basename, dirname, extname, join } from 'path';
 import { FileCursor } from '@rugo-vn/service';
 import { DIRECTORY_MIME } from './constants.js';
+import rimraf from 'rimraf';
 
 export const setConfig = async function({ root, config }) {
   this.registers[root] = config;
@@ -76,4 +77,13 @@ export const list = async function({ root, path = '' }) {
   const ls = readdirSync(entryPath);
   
   return await Promise.all(ls.map(name => get.bind(this)({ root, path: join(path, name )})));
+}
+
+export const remove = async function({ root, path = '' }) {
+  const entryPath = join(root, join('/', path));
+  const entry = await get.bind(this)({ root, path });
+
+  rimraf.sync(entryPath);
+
+  return entry;
 }
