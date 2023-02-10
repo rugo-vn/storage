@@ -94,14 +94,14 @@ Return:
 Arguments:
 
 - `from` (type: `string`) src path to move.
-- `to` (type: `string`) dest path move to.
+- `to` (type: `string`) dest path move to, this is a new entry.
 
 ### `compress`
 
 Arguments:
 
 - `from` (type: `string`) path of entry to compress.
-- `to` (type: `string`) dest path to put compress file.
+- `to` (type: `string`) dest path to put compress file, it will create a new file.
 
 Return:
 
@@ -112,7 +112,7 @@ Return:
 Arguments:
 
 - `from` (type: `string`) path of entry to extract.
-- `to` (type: `string`) dest path to put extract content.
+- `to` (type: `string`) dest path to put extract content, it will create a new directory.
 
 Return:
 

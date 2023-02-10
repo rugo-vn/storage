@@ -1,6 +1,6 @@
 {
   "name": "@rugo-vn/storage",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.1-beta.2",
   "description": "Store Management Service.",
   "main": "./src/index.js",
   "type": "module",
