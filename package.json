@@ -9,7 +9,9 @@
     "lint:fix": "eslint . --fix",
     "lint": "npm run lint:fix",
     "test": "mocha",
-    "coverage": "c8 npm run test"
+    "coverage": "c8 npm run test",
+    "publish:beta": "npm publish --access public --tag beta",
+    "publish:release": "npm publish --access public"
   },
   "author": "Vu Anh Hao <hi@haova.me> (https://www.haova.me)",
   "license": "MIT",
