@@ -1,3 +1,4 @@
+import { RugoException } from '@rugo-vn/exception';
 import { join } from 'path';
 
 import * as actions from './actions.js';
@@ -12,8 +13,8 @@ export const before = {
     }
 
     args.root = join(this.storage, spaceId, driveName);
-  }
-}
+  },
+};
 
 for (let name in actions) {
   before[name] ||= [];
